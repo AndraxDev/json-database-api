@@ -114,7 +114,7 @@ def read_child(path):
         try:
             data = data[child]
         except KeyError:
-            return 'Not found'
+            return '{"message": "Data not found", "code": 404}'
 
     return str(data)
 
