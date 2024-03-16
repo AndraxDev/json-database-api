@@ -8,6 +8,7 @@ WORKDIR /app
 COPY ./app.py /app
 COPY ./requirements.txt /app
 COPY ./database-test.json /app
+COPY ./database.json /app
 
 # Install dependencies
 RUN pip install -r requirements.txt

@@ -116,7 +116,7 @@ def read_child(path):
         except KeyError:
             return '{"message": "Data not found", "code": 404}'
 
-    return str(data)
+    return str(data).replace("'", '"')
 
 
 def write_child(path, value, datatype='json'):
