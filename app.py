@@ -26,7 +26,7 @@ app = Flask(__name__)
 cors = CORS(app)
 app.config['CORS_HEADERS'] = 'Content-Type'
 
-_GLOBAL_DATABASE_PATH = 'database-test.json'
+_GLOBAL_DATABASE_PATH = 'database.json'
 _GLOBAL_RESPONSE_MIME_TYPE = 'application/json'
 
 
@@ -116,7 +116,7 @@ def read_child(path):
         except KeyError:
             return 'Not found'
 
-    return data
+    return str(data)
 
 
 def write_child(path, value, datatype='json'):
